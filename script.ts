@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleSkillsButton = document.getElementById('toggle-skills') as HTMLButtonElement;
-    const skillsSection = document.getElementById('skills') as HTMLDivElement;
+    const skillsList = document.querySelector('#skills ul') as HTMLUListElement;
 
     let skillsVisible = true;
 
     toggleSkillsButton.addEventListener('click', () => {
         if (skillsVisible) {
-            skillsSection.querySelector('ul')!.style.display = 'none';
+            skillsList.style.display = 'none';
             toggleSkillsButton.textContent = 'Show Skills';
         } else {
-            skillsSection.querySelector('ul')!.style.display = 'block';
+            skillsList.style.display = 'block';
             toggleSkillsButton.textContent = 'Hide Skills';
         }
         skillsVisible = !skillsVisible;
